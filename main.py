@@ -11,7 +11,18 @@ def main() -> None:
     num_words = stats.get_num_words(text)
     chars_dict = stats.get_chars_dict(text)
     chars_dict_sorted = stats.chars_dict_to_sorted_list(chars_dict)
-    print_report(book_path, num_words, chars_dict_sorted)
+    while True:
+        print("1. Read the book")
+        print("2. Report of the book")
+        user_input=input("Do you want to read the book or have a report of it? (Use the numbers) ")
+        if user_input=="1":
+            print(text)
+            break
+        elif user_input=="2":
+            print_report(book_path, num_words, chars_dict_sorted)
+            break
+        else:
+            print("The program can't recognize the input. Check if the answer is within limits.")
 
 def print_report(path: str, word_count: int, sorted_list: list[tuple[str, int]]) -> None:
     print("============ BOOKBOT ============")
