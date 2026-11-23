@@ -14,11 +14,11 @@ def main() -> None:
     while True:
         print("1. Read the book")
         print("2. Report of the book")
-        user_input=input("Do you want to read the book or have a report of it? (Use the numbers) ")
-        if user_input=="1":
+        user_input = input("Do you want to read the book or have a report of it? (Use the numbers) ")
+        if user_input == "1":
             print(text)
             break
-        elif user_input=="2":
+        elif user_input == "2":
             print_report(book_path, num_words, chars_dict_sorted)
             break
         else:
